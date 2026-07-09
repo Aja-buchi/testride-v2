@@ -15,10 +15,16 @@ export const metadata: Metadata = {
   description:
     'Book a qualified accompanying driver and insured car for your UK practical driving test. Fast, reliable, stress-free test-day support.',
   keywords: 'UK driving test, test day support, accompanying driver, learner driver, DVSA, practical test car',
+  icons: {
+    icon: '/testRide%20logo.png',
+    shortcut: '/testRide%20logo.png',
+    apple: '/testRide%20logo.png',
+  },
   openGraph: {
     title: 'TestRide – Test Day Support for Learner Drivers',
     description: 'Book a qualified driver and car for your UK practical driving test.',
     type: 'website',
+    images: ['/testRide%20logo.png'],
   },
 };
 
