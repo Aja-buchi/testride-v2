@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import BecomeDriverForm from '@/components/BecomeDriverForm';
+import BecomeADriverClient from './BecomeADriverClient';
 
 export const metadata: Metadata = {
   title: 'Become a Driver – TestRide',
@@ -43,29 +43,8 @@ export default function BecomeADriverPage() {
         </div>
       </div>
 
-      {/* Form card — centred below image */}
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
-        <div className="bg-white rounded-3xl shadow-xl overflow-hidden">
-          {/* Teal accent bar */}
-          <div className="h-2 bg-teal-500" />
-          <div className="p-8 sm:p-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Become A Driver</h2>
-            <p className="text-gray-600 text-base leading-relaxed mb-3">
-              TestRide is building a network of reliable drivers who may be able to support learner
-              drivers attending practical driving tests across the UK.
-            </p>
-            <p className="text-gray-600 text-base leading-relaxed mb-3">
-              If you hold a full driving licence and meet the eligibility requirements, complete the
-              form below to express interest.
-            </p>
-            <p className="text-gray-500 text-sm italic mb-3">
-              Submitting this form does not guarantee acceptance into the network.
-            </p>
-            <p className="text-red-500 text-sm mb-8">* Indicates required field</p>
-            <BecomeDriverForm />
-          </div>
-        </div>
-      </div>
+      {/* 3-stage form flow */}
+      <BecomeADriverClient />
     </div>
   );
 }

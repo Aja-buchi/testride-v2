@@ -31,7 +31,7 @@ const initial: FormData = {
   previousExperience: '', motivation: '', consent: false,
 };
 
-export default function BecomeDriverForm() {
+export default function BecomeDriverForm({ onSuccess }: { onSuccess?: () => void }) {
   const router = useRouter();
   const [form, setForm] = useState<FormData>(initial);
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({});
@@ -80,7 +80,11 @@ export default function BecomeDriverForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
-      router.push('/thank-you/driver');
+      if (onSuccess) {
+        onSuccess();
+      } else {
+        router.push('/thank-you/driver');
+      }
     } catch {
       setStatus('error');
     }

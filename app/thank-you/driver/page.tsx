@@ -4,10 +4,8 @@ import site from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Application Received – TestRide',
-  description: 'Your driver application has been received. Complete registration to join the TestRide network.',
+  description: 'Your driver application has been received. We will be in touch within 48 hours.',
 };
-
-const STRIPE_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_DRIVER_LINK ?? '#';
 
 export default function ThankYouDriverPage() {
   return (
@@ -26,33 +24,26 @@ export default function ThankYouDriverPage() {
           application and get back to you within <strong>48 hours</strong>.
         </p>
         <p className="text-gray-600 mb-8 leading-relaxed">
-          To complete your driver registration and secure your place in the network, please proceed
-          with the registration fee below.
+          If you applied via our website, please continue the verification process to complete
+          your registration.
         </p>
 
-        {/* Stripe Pay Now */}
-        <a
-          href={STRIPE_PAYMENT_LINK}
-          className="btn-green text-lg px-10 py-4 w-full block mb-4"
-          target={STRIPE_PAYMENT_LINK === '#' ? undefined : '_blank'}
-          rel="noopener noreferrer"
+        <Link
+          href="/become-a-driver"
+          className="btn-primary text-base px-8 py-3 inline-block mb-6"
         >
-          Pay Now
-        </a>
-
-        <p className="text-gray-400 text-xs mb-6">
-          Secure payment powered by Stripe.
-        </p>
+          ← Return to Application
+        </Link>
 
         <div className="border-t border-gray-100 pt-6">
-          <p className="text-gray-500 text-sm mb-4">Questions? Contact us:</p>
+          <p className="text-gray-500 text-sm mb-2">Questions? Contact us:</p>
           <a href={`mailto:${site.email}`} className="text-blue-600 hover:underline text-sm">
             {site.email}
           </a>
           <p className="text-gray-500 text-sm mt-1">{site.phone}</p>
         </div>
 
-        <Link href="/" className="inline-block mt-6 text-blue-600 text-sm hover:underline">
+        <Link href="/" className="inline-block mt-4 text-blue-600 text-sm hover:underline">
           ← Back to homepage
         </Link>
       </div>

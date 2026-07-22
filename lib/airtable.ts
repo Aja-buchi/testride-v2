@@ -27,3 +27,7 @@ export function getDriversTable() {
 export function getEnquiriesTable() {
   return getBase()(process.env.AIRTABLE_ENQUIRIES_TABLE ?? 'Enquiries');
 }
+
+export function getVerificationsTable() {
+  return getBase()(process.env.AIRTABLE_VERIFICATIONS_TABLE ?? 'Verifications');
+}
