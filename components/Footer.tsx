@@ -128,8 +128,20 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Scrolling legal notice */}
+        <div className="mt-12 overflow-hidden border-t border-b border-gray-700 py-3">
+          <div className="flex whitespace-nowrap animate-marquee">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <span key={i} className="text-gray-400 text-sm mx-12">
+                TestRide is a trading name of Ajonyx Holdings Ltd, registered in England and Wales (Company No. 17421899)
+                &nbsp;&nbsp;•&nbsp;&nbsp;
+              </span>
+            ))}
+          </div>
+        </div>
+
         {/* Disclaimer + copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-700">
+        <div className="mt-8 pt-8 border-t border-gray-700">
           <p className="text-gray-400 text-xs text-center max-w-3xl mx-auto leading-relaxed">
             <em>
               Important: We are an independent support platform and are not affiliated with the DVSA. Availability may

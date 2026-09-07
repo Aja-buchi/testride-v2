@@ -1,7 +1,8 @@
 const site = {
   name: 'TestRide',
-  email: 'support@conduisure.co.uk',   // ← update this when ready
-  phone: '+44 20 7946 0857',            // ← update this when ready
+  email: 'info@testride.co',   // ← update this when ready
+  phone: '+44 78 6265 5959', 
+  address: '82A James Carter Road Mildenhall IP28 7DE',            // ← update this when ready
   socials: {
     facebook: 'https://facebook.com',
     instagram: 'https://instagram.com',
