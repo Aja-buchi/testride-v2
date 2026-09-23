@@ -3,8 +3,6 @@
 import { useState } from 'react';
 import site from '@/lib/site';
 
-const STRIPE_PAYMENT_LINK = process.env.NEXT_PUBLIC_STRIPE_DRIVER_LINK ?? '#';
-
 interface UploadField {
   id: string;
   label: string;
@@ -131,21 +129,9 @@ export default function VerificationForm() {
             <strong>48 hours</strong>.
           </p>
           <p className="text-gray-600 mt-2 leading-relaxed">
-            To complete your driver registration and secure your place in the network,
-            please pay the one-time registration fee below.
+            We&apos;ll be in touch by email once your verification is complete.
           </p>
         </div>
-
-        {/* Stripe Pay Now */}
-        <a
-          href={STRIPE_PAYMENT_LINK}
-          className="btn-green text-lg px-10 py-4 w-full block"
-          target={STRIPE_PAYMENT_LINK === '#' ? undefined : '_blank'}
-          rel="noopener noreferrer"
-        >
-          Pay Now – Complete Registration
-        </a>
-        <p className="text-gray-400 text-xs">Secure payment powered by Stripe.</p>
 
         <div className="border-t border-gray-100 pt-4 text-sm text-gray-500">
           <p>

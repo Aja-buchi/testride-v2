@@ -4,10 +4,11 @@ const site = {
   phone: '+44 78 6265 5959', 
   address: '82A James Carter Road Mildenhall IP28 7DE',            // ← update this when ready
   socials: {
-    facebook: 'https://facebook.com',
-    instagram: 'https://instagram.com',
-    tiktok: 'https://tiktok.com',
-    x: 'https://x.com',
+    //facebook: 'https://facebook.com',
+    instagram: 'https://www.instagram.com/testrideuk',
+    linkedin: 'https://www.linkedin.com/company/testride-uk/',
+    tiktok: 'http://www.tiktok.com/@testrideuk',
+    //x: 'https://x.com',
   },
   legal:
     'We are an independent support platform and are not affiliated with the DVSA. ' +
